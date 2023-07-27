@@ -95,8 +95,14 @@
               <li>
                 <a href="ozone therap.html"><span>Ozone Therapy</span></a>
               </li>
+              <li class="dropdown"><a href="Intramuscular-njections.html"><span>Intramuscular Injections</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="Intramuscular-njections.html#Intramuscular-Injections">Traumeel Injection</a></li>
+                  <li><a href="Intramuscular-njections.html#Vitamin B12/B-Complex-Injection">Vitamin B12/B-Complex Injection</a></li>
+                </ul>
+            </li>
             </ul>
-          </li>
+            
         
           <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
@@ -263,6 +269,23 @@
               
             <p>Our diabetes management service is designed to help individuals living with diabetes manage their condition effectively. Our team of healthcare professionals works with each patient to develop a personalized plan that addresses their specific needs.</p>
             <br> <a class="btn-enquire scrollto" href="diabetes-management.html">View treatments</a>
+          </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/Intramuscular injection.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <a href="Intramuscular-njections.html" class="stretched-link">
+                <h3>Intramuscular Injections </h3>
+              </a>
+              
+            <p>Discover swift relief with our Intramuscular Injections. Safe, efficient, and administered by caring professionals. Your health is our priority. Book now for a seamless experience.</p>
+            <br> <a class="btn-enquire scrollto" href="Intramuscular-njections.html">View treatments</a>
           </div>
           </div>
         </div><!-- End Service Item -->
@@ -627,30 +650,38 @@ overlayImage.addEventListener('pointercancel', () => {
             </div>
 
           </div>
-          <div class="col-lg-8">
-            <form action="forms/sendEmail.php" method="post" role="form" class="php-email-form">
-              <div class="row">
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="phone" class="form-control" name="phone" id="contact" placeholder="Phone Number"data-rule="minlen:10" data-msg="Please enter a valid phone number" />
+                  <div class="validate"></div>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
               </div>
-              <div class="my-3">
+              <div class="mb-3">
                 <div class="loading">Loading</div>
-               
+                <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
 
 
         </div>
@@ -694,6 +725,8 @@ overlayImage.addEventListener('pointercancel', () => {
               <li><a href="IV-treatment.html">IV Infusion </a></li>
               <li><a href="index.html#services" >Ozone Therapy</a></li>
               <li><a href="diabetes-management.html">Diabetes Management</a></li>
+              <li><a href="Intramuscular-njections.html"> Intramuscular Injections</a></li>
+             
              
             </ul>
           </div>
